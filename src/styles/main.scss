@@ -1,0 +1,55 @@
+@use 'variaveis';
+@use 'header';
+@use 'hero';
+@use 'info';
+@use 'characters';
+@use 'curiosity';
+@use 'footer';
+
+*{
+    list-style-type: none;
+}
+
+body,html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    // background: #373737;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundario;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small{
+    @include text(12px);
+    color: white;
+}
+
+.custom--container{
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}

@@ -1,0 +1,60 @@
+@use 'variaveis';
+
+.hero{
+    min-height: 80vh;
+    // background-image: url('../../dist/images/hero-image.jpg');
+    // text-align: left;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+
+    &__image{
+        position: relative;
+        height: 700px;
+        overflow: hidden;
+        background-image: url('../../dist/images/hero-image.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 75%;
+        -webkit-mask-image: radial-gradient(circle ,transparent, black);
+        mask-image: radial-gradient(circle, transparent, black);
+    }
+    &__content{
+        overflow-x: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-100%);
+        overflow: hidden;
+        text-align: center;
+        color: white;
+        font-weight: 700;
+        h1{
+            font-size: 65px;
+            letter-spacing: 0.2em;
+        }
+        &__text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: silver;
+            font-size: 16px;
+            a{
+                text-decoration: none;
+                color: white;
+                background-color: rgb(255, 181, 44);
+                width: fit-content;
+                padding: 1vw;
+                border-radius: 1rem;
+                transition: all ease 0.5s;
+                &:hover{
+                    text-decoration: none;
+                    color: white;
+                    background-color: orange;
+                    transform: scale(1.1);
+                    transition: all ease 0.5s;
+                }
+            }
+        }
+    }
+}

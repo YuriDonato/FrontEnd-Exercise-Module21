@@ -1,0 +1,35 @@
+@use "variaveis";
+
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #04071478;
+    transition: background-color 0.5s ease;
+    z-index: 1;
+
+    &--is--hidden {
+        background-color: transparent;
+        transition: background-color 0.5s ease;
+    }
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width:768px){
+            padding: 0 12px 0 20px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        &__item {
+            padding-top: 1rem;
+            transition: opacity 0.5s ease;
+        }
+    }
+}
